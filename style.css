@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#0099ff), to(#8bffa4));
+  background: linear-gradient(to right, #0099ff, #8bffa4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+header,
+form,
+#todos {
+  max-width: 500px;
+  width: 100%;
+}
+
+header {
+  background: #006caa;
+  color: #fff;
+  padding: 0.6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+header #todoFilter {
+  outline: none;
+  border: none;
+  width: 8rem;
+  padding: 0.2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #e6e6e6;
+  cursor: pointer;
+}
+
+header .select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+header .select::after {
+  content: "\25BC";
+  color: white;
+  position: absolute;
+  background: #0088d6;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1.8rem;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.6rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form #todoInput,
+form #todoAddBtn {
+  outline: none;
+  border: none;
+}
+
+form #todoInput {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  background: #e6e6e6;
+}
+
+form #todoAddBtn {
+  font-weight: 900;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.6rem;
+  background: #0088d6;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+form #todoAddBtn:hover {
+  background: #005a8f;
+}
+
+#todos {
+  list-style: none;
+}
+
+#todos .todo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  margin-top: 0.3rem;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+
+#todos .todo-check {
+  background: #25d115;
+}
+
+#todos .todo-check::after {
+  content: "\2714";
+  color: #fff;
+}
+
+#todos .todo-check:hover {
+  background: #1dad10;
+}
+
+#todos .todo-del {
+  background: #ff4010;
+}
+
+#todos .todo-del::after {
+  content: "\2718";
+  color: #fff;
+}
+
+#todos .todo-del:hover {
+  background: #d6360e;
+}
+
+#todos .todo-text {
+  padding: 0.6rem;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#todos .todo:hover .btn {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+#todos .delete {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+#todos[data="mobile"] .todo .btn {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/*# sourceMappingURL=style.css.map */
